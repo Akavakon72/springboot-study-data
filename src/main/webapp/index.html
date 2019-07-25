@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+function helloworld(){
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(response) {
+		debugger;
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("demo").innerHTML = this.responseText;
+		}
+	}; 
+	xhr.open('GET', "http://localhost:8080/topics", true);
+	xhr.send();
+}
+</script>
+</head>
+<body>
+hello World
+
+asdfasdas
+<button name="hello" onclick="helloworld()"> hello</button>
+<span id="demo"></span>
+</body>
+
+</html>
